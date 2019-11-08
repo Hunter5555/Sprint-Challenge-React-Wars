@@ -26,13 +26,26 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+It is a javascript library that allows us to concisely write components that connect to HTML/CSS
+
 - [ ] What does it mean to _think_ in react?
+
+it means to keep in mind how you will use react components to perform functions. 
+
 
 - [ ] Describe state.
 
+state is a type of deterministic function that gives 
+
+
 - [ ] Describe props.
 
+Props are a type of funtion that are non deterministic so what you can use them to effect other functions.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+They allow you to influence functions apart outside of a function itself. 
+
 
 ## Project Set Up
 
