@@ -1,6 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from "axios"
+import PersonCard from "./components/Person.js"
+import styled from "styled-components"
 import './App.css';
 
+const StyledDiv = styled.div`
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+`
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
@@ -12,6 +20,19 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <StyledDiv>
+        {personalbar.map((person, index) =>{
+          return(
+            <PersonCard
+            name={person.name}
+            key={index}
+            gender={person.gender}
+            height={person.height}
+            mass={person.mass}
+            hariColor={person.hair_color}/>
+          )
+        })}
+      </StyledDiv>
     </div>
   );
 }
