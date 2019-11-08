@@ -10,6 +10,18 @@ flex-wrap: wrap;
 justify-content: space-evenly;
 `
 const App = () => {
+  const [persons, setPersonState] = useState([])
+  useEffect(() => {
+    axios
+    .get("https://swapi.com/api/people/?page=2")
+    .then(response => {
+      console.log(response.data)
+      setPersonState(response.data.results)
+    })
+    .catch(err => console.error(err))
+  }, [])
+  console.log(persons)
+  
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -21,7 +33,7 @@ const App = () => {
     <div className="App">
       <h1 className="Header">React Wars</h1>
       <StyledDiv>
-        {personalbar.map((person, index) =>{
+        {persons.map((person, index) =>{
           return(
             <PersonCard
             name={person.name}
